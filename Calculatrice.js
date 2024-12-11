@@ -1,17 +1,51 @@
 const prompt = require ('prompt-sync')();
-console.log("~~~~~~~~~~Menu~~~~~~~~~~~~~~~");
-console.log("1.addition");
-console.log("2.soustraction");
-console.log("3.multiplication");
-console.log("4.division");
-console.log("5.puisance");
-console.log("6.racine carree");
-console.log("7.factorielle");
 
-const num1 = prompt("entrer le premier nombre:");
+const op = prompt("Entrez l'opération (+, -, *, /, ^, √, ! ):");
+const num1 = Number(prompt("entrer le premier nombre:"));
+const num2 = Number(prompt("entrer le deuxieme nombre:"));
 
-
-
+switch(op){ 
   
-
+  case '+':
+     
+     const sum = num1 + num2;
+     console.log(`le resultat est : ${sum}`);
+    break;
   
+  case '-':
+    
+     sous = num1 - num2;
+    console.log(`le resultat est : ${sous}`);
+    break;
+
+  case '*':
+    mult = num1 * num2;
+    console.log(`le resultat est : ${mult}`);
+    break;
+
+  case '/':
+    if (num2 == 0){
+      console.log("erreur ne divis pas par 0");
+    }else {
+    div = num1 / num2;
+    console.log(`le resultat est : ${div}`);
+    }
+    break;
+  
+   case '^':
+
+
+    break;
+  
+  case '√':
+    break;
+ 
+  case '!':
+    break;
+    */
+
+  default :
+    console.log("erreur");
+    resultat = undefined;
+  
+}
