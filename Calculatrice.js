@@ -1,6 +1,16 @@
 const prompt = require('prompt-sync')();
 
 while (true) {
+
+  console.log("~~~~~~~~~~Menu~~~~~~~~~~~~~~");
+  console.log("1.addition (+) ");
+  console.log("2.soustraction (-) ");
+  console.log("3.multiplication (*) ");
+  console.log("4.division (/) ");
+  console.log("5.puissance (^)");
+  console.log("6.racine carree (<) ");
+  console.log("7.factorielle (!) ");
+
   const op = prompt("Entrez l'opération (+, -, *, /, ^, <, ! ) ou ( q ) pour quitter : ");
   
   if (op == 'q') {
@@ -69,6 +79,6 @@ switch(op) {
         break;
 
     default:
-        console.log(`Paramètre incorrect`);
+        console.log(`Paramètre non trouve`);
 }
 }
