@@ -12,18 +12,15 @@ while (true) {
   console.log("7.factorielle (!) ");
 
   const op = prompt("Entrez l'opération (+, -, *, /, ^, <, ! ) ou ( q ) pour quitter : ");
-
+  
   if (op == 'q') {
       console.log("Merci d'avoir utilisé notre calculatrice. Au revoir ");
       break;
   }
 
-   let num1 = 0;
-   let num2=0;
+  let num1 = Number(prompt("entrer le nombre:"));
+  let num2=0;
 
-  if (['+','-','*','/','^', '<', '!'].includes(op)){
-    num1 = Number(prompt("entrer le premier nombre:"));
-  }
   if(['+','-','*','/','^'].includes(op)){
       num2 = Number(prompt("ajoute le deuxieme nombre:"));
   }
@@ -52,7 +49,6 @@ switch(op) {
             console.log(`le resultat est : ${div}`);
         }
         break;
-
 
     case '^':
         const puiss = Math.pow(num1, num2);
