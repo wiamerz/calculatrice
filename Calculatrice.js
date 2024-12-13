@@ -2,16 +2,17 @@ const prompt = require('prompt-sync')();
 
 while (true) {
 
-  console.log("~~~~~~~~~~Menu~~~~~~~~~~~~~~");
-  console.log("1.addition (+) ");
-  console.log("2.soustraction (-) ");
-  console.log("3.multiplication (*) ");
-  console.log("4.division (/) ");
-  console.log("5.puissance (^)");
-  console.log("6.racine carree (<) ");
-  console.log("7.factorielle (!) ");
+  console.log("~~~~~~~~~~Menu~~~~~~~~~~~~");
+  console.log("addition (+) ");
+  console.log("soustraction (-) ");
+  console.log("multiplication (*) ");
+  console.log("division (/) ");
+  console.log("puissance (^)");
+  console.log("racine carree ($) ");
+  console.log("factorielle (!) ");
+  console.log("quit (q) ");
 
-  const op = prompt("Entrez l'opération (+, -, *, /, ^, <, ! ) ou ( q ) pour quitter : ");
+  const op = prompt("Entrez l'opération (+, -, *, /, ^, $, ! ) ou ( q ) pour quitter : ");
 
   if (op == 'q') {
       console.log("Merci d'avoir utilisé notre calculatrice. Au revoir ");
@@ -21,7 +22,7 @@ while (true) {
    let num1 = 0;
    let num2=0;
 
-  if (['+','-','*','/','^', '<', '!'].includes(op)){
+  if (['+','-','*','/','^', '$', '!'].includes(op)){
     num1 = Number(prompt("entrer le premier nombre:"));
   }
   if(['+','-','*','/','^'].includes(op)){
@@ -59,7 +60,7 @@ switch(op) {
         console.log(`le resultat est : ${puiss}`);
         break;
 
-    case '<':
+    case '$':
         if (num1<0){
             console.log("error, the number should note be negative ");
         } else { 
