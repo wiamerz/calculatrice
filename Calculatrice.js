@@ -18,40 +18,40 @@ while (true) {
       break;
   }
 
-  const num1 = Number(prompt("entrer le nombre:"));
+  let num1 = Number(prompt("entrer le nombre:"));
+  let num2=0;
+
+  if(['+','-','*','/','^'].includes(op)){
+      num2 = Number(prompt("ajoute le deuxieme nombre:"));
+  }
 
 switch(op) {
     case '+':
-        const num2_add = Number(prompt("ajoute le deuxieme nombre:"));
-        const sum = num1 + num2_add;
+        const sum = num1 + num2;
         console.log(`le resultat est : ${sum}`);
         break;
 
     case '-':
-        const num2_sous = Number(prompt("ajoute le deuxieme nombre:"));
-        const sous = num1 - num2_sous;
+        const sous = num1 - num2;
         console.log(`le resultat est : ${sous}`);
         break;
 
     case '*':
-        const num2_mult = Number(prompt("ajoute le deuxieme nombre:"));
-        const mult = num1 * num2_mult;
+        const mult = num1 * num2;
         console.log(`le resultat est : ${mult}`);
         break;
 
     case '/':
-        const num2_div = Number(prompt("ajoute le deuxieme nombre:"));
-        if (num2_div === 0) {
+        if (num2 == 0) {
             console.log("erreur ne divise pas par 0");
         } else {
-            const div = num1 / num2_div;
+            const div = num1 / num2;
             console.log(`le resultat est : ${div}`);
         }
         break;
 
     case '^':
-        const num2_puiss = Number(prompt("ajoute le deuxieme nombre:"));
-        const puiss = Math.pow(num1, num2_puiss);
+        const puiss = Math.pow(num1, num2);
         console.log(`le resultat est : ${puiss}`);
         break;
 
@@ -67,7 +67,7 @@ switch(op) {
     case '!':
         if (num1 < 0) {
             console.log(`La factorielle ne peut pas être négative`);
-        } else if (num1 === 0 || num1 === 1) {
+        } else if (num1 == 0 || num1 == 1) {
             console.log(`Le resultat est : 1`);
         } else {
             let resultat = 1;
